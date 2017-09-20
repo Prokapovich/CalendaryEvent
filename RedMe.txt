@@ -1,0 +1,33 @@
+Описание API проекта.
+
+Из модуля импортируюся функции :
+ 1)taskCreation (name, task, ...time) где name    - имя создаваемого таймера
+                                          task    - функция которая должна выполняться.
+                                          ...time - время (задётся объектом типа date,
+                                                            или набором чисел через запятую,
+                                                            YYYY,MM,DD,HH,mm,ss)
+ 2)listTimers -массив объектов Taimer
+         class Timer {
+             constructor (timerId, date, name){
+                 this.timerId = timerId;
+                 this.date = date;
+                 this.name = name;
+                 this.task = task;
+             }
+         };
+ 3)removeTimer (name, a=0)  - удаление таймера (если a != 0 то поск присходит по taimerId)
+ 4)changeTimerName (name, newName, a=0) -если a != 0 то поск присходит по taimerId
+ 5)changeTimerDateByName (name, ...newDate)
+ 6)changeTimerDateByTimerId (timerId, ...newDate)
+
+
+ caEv.js - файл с модулем
+ main.js - файл используемый для проерки работоспособности модуля.
+
+ после изменения файлов необходимо в командной строке прописать "npm run build"
+
+ скрипт подключается в index.html
+
+ из-за не хватки времени выполнена лишь часть работы.
+ Так же в случае чего надеюсь сойдёт за лёгкий уровен. Хорошего дня.
+ 
